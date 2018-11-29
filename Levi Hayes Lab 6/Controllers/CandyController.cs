@@ -36,7 +36,6 @@ namespace Levi_Hayes_Lab_6.Controllers
         public IActionResult Create(CandyModel model)
         {
             Candy candy = new Candy();
-            candy.id = model.CandyID;
             candy.productName = model.CandyName;
             _CandyRepo.Insert(candy);
             return RedirectToAction("Index");

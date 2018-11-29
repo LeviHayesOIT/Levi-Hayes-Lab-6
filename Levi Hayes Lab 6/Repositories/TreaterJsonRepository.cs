@@ -15,12 +15,6 @@ namespace Levi_Hayes_Lab_6.Repositories
             return System.IO.Path.Combine(AppDomain.CurrentDomain.GetData("DataDirectory").ToString(), "Treaters.json");
         }
 
-        public void Delete(int TreaterID)
-        {
-            List<Treater> treaterList = GetList();
-            treaterList.RemoveAll(m => m.id == TreaterID);
-        }
-
         public List<Treater> GetList()
         {
             List<Treater> treaterList = new List<Treater>();
@@ -30,6 +24,7 @@ namespace Levi_Hayes_Lab_6.Repositories
                 string json = r.ReadToEnd();
                 treaterList = JsonConvert.DeserializeObject<List<Treater>>(json);
             }
+            
 
             return treaterList;
         }
@@ -37,6 +32,8 @@ namespace Levi_Hayes_Lab_6.Repositories
         public void Insert(Treater treater)
         {
             List<Treater> treaterList = GetList();
+            treater.id = (treaterList.Count <= 0) ? 0 : treaterList.Select(m => m.id).Max() + 1;
+
             treaterList.Add(treater);
             WriteList(treaterList);
         }

@@ -44,6 +44,9 @@ namespace Levi_Hayes_Lab_6.Controllers
             if (!ModelState.IsValid)
                 return RedirectToAction("Index", model);
 
+            model.CostumeName = _CostumeRepository.GetList().Select(m => m).First(m => m.id == model.CostumeID).costume;
+            model.CandyName = _CandyRepository.GetList().Select(m => m).First(m => m.id == model.CandyID).productName;
+           
             _TreaterRepository.Insert(model.GetTreaterObject());
             return RedirectToAction("Index");
 

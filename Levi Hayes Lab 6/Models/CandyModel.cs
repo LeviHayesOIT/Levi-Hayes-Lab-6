@@ -13,8 +13,6 @@ namespace Levi_Hayes_Lab_6.Models
     public class CandyModel
     {
         public List<Candy> CandyList { get; set; }
-      
-        public int CandyID { get; set; }
 
         [DisplayName("Candy Name")]
         [Required(ErrorMessage ="Please enter a name of a candy")]

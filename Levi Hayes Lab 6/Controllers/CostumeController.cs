@@ -36,7 +36,6 @@ namespace Levi_Hayes_Lab_6.Controllers
         public IActionResult Create(CostumeModel model)
         {
             Costume costume = new Costume();
-            costume.id = model.CostumeID;
             costume.costume = model.CostumeName;
             _CostumeRepo.Insert(costume);
             return RedirectToAction("Index");

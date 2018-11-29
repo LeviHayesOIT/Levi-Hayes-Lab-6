@@ -19,6 +19,7 @@ namespace Levi_Hayes_Lab_6.Repositories
         {
             List<Costume> costumeList = GetList();
             costumeList.RemoveAll(m => m.id == CostumeID);
+            WriteList(costumeList);
         }
 
         public List<Costume> GetList()
@@ -37,6 +38,8 @@ namespace Levi_Hayes_Lab_6.Repositories
         public void Insert(Costume costume)
         {
             List<Costume> costumeList = GetList();
+            costume.id = (costumeList.Count <= 0) ? 0 : costumeList.Select(m => m.id).Max() + 1;
+
             costumeList.Add(costume);
             WriteList(costumeList);
         }

@@ -14,8 +14,6 @@ namespace Levi_Hayes_Lab_6.Models
     {
         public List<Costume> CostumeList { get; set; }
 
-        public int CostumeID { get; set; }
-
         [DisplayName("Costume Name")]
         [Required(ErrorMessage = "Please enter a name of a costume")]
         public string CostumeName { get; set; }

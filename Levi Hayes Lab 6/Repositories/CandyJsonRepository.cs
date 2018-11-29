@@ -19,6 +19,7 @@ namespace Levi_Hayes_Lab_6.Repositories
         {
             List<Candy> candyList = GetList();
             candyList.RemoveAll(m => m.id == CandyID);
+            WriteList(candyList);
         }
 
         public List<Candy> GetList()
@@ -37,6 +38,8 @@ namespace Levi_Hayes_Lab_6.Repositories
         public void Insert(Candy candy)
         {
             List<Candy> candyList = GetList();
+            candy.id = (candyList.Count <= 0) ? 0 : candyList.Select(m => m.id).Max() + 1;
+
             candyList.Add(candy);
             WriteList(candyList);
         }
