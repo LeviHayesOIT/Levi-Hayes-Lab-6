@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Levi_Hayes_Lab_6.Repositories;
 
 namespace Levi_Hayes_Lab_6
 {
@@ -33,6 +34,13 @@ namespace Levi_Hayes_Lab_6
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.Configure<TreaterSettings>(Configuration);
+            services.Configure<CandySettings>(Configuration);
+            services.Configure<CostumeSettings>(Configuration);
+            services.AddTransient<ITreaterRepository, TreaterDBRepository>();
+            services.AddTransient<ICandyRepository, CandyDBRepository>();
+            services.AddTransient<ICostumeRepository, CostumeDBRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

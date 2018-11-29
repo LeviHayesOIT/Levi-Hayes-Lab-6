@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Levi Hayes Lab 6", "Levi Hayes Lab 6\Levi Hayes Lab 6.csproj", "{D0AB36FF-D3E6-4BF1-B4EA-851AB690B46F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Levi Hayes Lab 6", "Levi Hayes Lab 6\Levi Hayes Lab 6.csproj", "{D0AB36FF-D3E6-4BF1-B4EA-851AB690B46F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{9BFDFC81-CA22-4872-89FB-46F44EA3BDEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D0AB36FF-D3E6-4BF1-B4EA-851AB690B46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0AB36FF-D3E6-4BF1-B4EA-851AB690B46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0AB36FF-D3E6-4BF1-B4EA-851AB690B46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFDFC81-CA22-4872-89FB-46F44EA3BDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFDFC81-CA22-4872-89FB-46F44EA3BDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFDFC81-CA22-4872-89FB-46F44EA3BDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFDFC81-CA22-4872-89FB-46F44EA3BDEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

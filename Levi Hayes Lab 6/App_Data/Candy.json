@@ -1,0 +1,18 @@
+[
+  {
+    "Id": 1,
+    "ProductName": "Twix"
+  },
+  {
+    "Id": 2,
+    "ProductName": "Kit Kat"
+  },
+  {
+    "Id": 3,
+    "ProductName": "Snickers"
+  },
+  {
+    "Id": 77,
+    "ProductName": "Big Hunk"
+  }
+]
