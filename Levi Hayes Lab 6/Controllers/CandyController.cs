@@ -27,13 +27,13 @@ namespace Levi_Hayes_Lab_6.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            TreaterModel model = new TreaterModel();
+            CandyModel model = new CandyModel();
             model.CandyList = _CandyRepo.GetList();
             return View(model);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(TreaterModel model)
+        public IActionResult Create(CandyModel model)
         {
             Candy candy = new Candy();
             candy.id = model.CandyID;

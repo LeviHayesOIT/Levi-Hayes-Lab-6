@@ -28,6 +28,7 @@ namespace Levi_Hayes_Lab_6.Models
         [UIHint("CandyDropdown")]
         public int CandyID { get; set; }
         public string CandyName { get; set; }
+
         [Required(ErrorMessage = "Treater needs a costume")]
         [DisplayName("Treater's costume")]
         [UIHint("CostumeDropdown")]

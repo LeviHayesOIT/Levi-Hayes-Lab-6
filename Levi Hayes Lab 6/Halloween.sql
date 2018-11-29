@@ -167,3 +167,5 @@ CREATE USER Ghost;
 GO
 GRANT EXECUTE TO Ghost;
 GO
+
+SELECT * FROM Treaters
