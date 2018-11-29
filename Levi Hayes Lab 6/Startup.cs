@@ -18,6 +18,7 @@ namespace Levi_Hayes_Lab_6
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -66,6 +67,9 @@ namespace Levi_Hayes_Lab_6
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            string baseDir = env.ContentRootPath;
+            AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Path.Combine(baseDir, "App_Data"));
+
         }
     }
 }
